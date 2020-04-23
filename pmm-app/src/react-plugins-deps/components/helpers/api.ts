@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { showErrorNotification } from './notification-manager';
 
-
 class ApiRequest {
   axiosInstance: axios.AxiosInstance;
 
@@ -61,7 +60,7 @@ class ApiRequest {
   }
 }
 
-export const apiRequest = new ApiRequest();
+export const apiRequest = new ApiRequest({});
 export const apiRequestQAN = new ApiRequest({ baseURL: '/v0/qan' });
 export const apiRequestManagement = new ApiRequest({ baseURL: '/v1/management' });
 export const apiRequestInventory = new ApiRequest({ baseURL: '/v1/inventory' });
